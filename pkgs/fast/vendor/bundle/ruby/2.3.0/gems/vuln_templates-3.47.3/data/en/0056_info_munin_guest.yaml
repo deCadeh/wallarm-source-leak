@@ -1,0 +1,30 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '60'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Munin monitoring panel guest access at host '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  Lack of authentication allows the attacker to operate with the Munin monitoring web interface.
+
+:additional          : >
+  Deny anonymous (guest) access to the Munin web interface to fix this issue.
+
+  Installed Munin version is:
+    <pre>
+      <%= self.munin_version %>
+    </pre>
+
+:exploit_example     : <%= self.exploit_example %>

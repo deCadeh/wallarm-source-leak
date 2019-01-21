@@ -1,0 +1,25 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '50'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Open registration on <% self.project.capitalize %>  at '<%= self.domain %>'
+
+:description         : >
+  Vulnerability is caused by administring error which gives an unauthorized third parties an opportunity to access information designated for employees only. An attacker can gain access to proprietary information and trade secrets.
+
+:additional          : >
+  In order to eliminate this vulnerability it is essential to forbid registration for third parties.
+
+:exploit_example     : <%= self.exploit_example %>

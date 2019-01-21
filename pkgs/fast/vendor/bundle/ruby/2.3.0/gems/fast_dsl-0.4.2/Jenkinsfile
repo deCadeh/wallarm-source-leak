@@ -1,0 +1,3 @@
+#!groovy
+
+BuildAndPublishGem(compose: 'compose.yml')

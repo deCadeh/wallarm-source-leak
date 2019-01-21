@@ -1,0 +1,9 @@
+#!groovy
+
+BuildDocker(
+    template: "elastic/Dockerfile.in",
+    name:     "wallarm-testrun-log-es"
+)
+
+BuildAndPublishGem(compose: 'compose-jenkins.yml')
+

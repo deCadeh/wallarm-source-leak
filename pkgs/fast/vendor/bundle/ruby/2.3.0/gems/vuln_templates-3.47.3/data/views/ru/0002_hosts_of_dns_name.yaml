@@ -1,0 +1,10 @@
+---
+"
+Домен <%= self.name %> имеет следующие IP адреса:
+<ul>
+<% self.hosts.each do |host|%>
+<li><%= host %></li>
+<% end %>
+</ul>
+"
+...

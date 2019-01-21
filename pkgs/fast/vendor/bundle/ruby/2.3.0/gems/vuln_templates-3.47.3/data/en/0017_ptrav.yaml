@@ -1,0 +1,26 @@
+---
+
+:type                : ptrav
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : PTRAV by improper input validation at '<%= self.parameter %>' parameter at '<%= self.path %>' action
+
+:description         : This vulnerability is due to the absence of specific file system name characters filtering
+  when using the user data as part of the path or file name. As a result, the malicious user can perform operations
+  with files located in the directories other than the one allowed according to the web application logic.
+  In order to change directories, the attacker can use the double point symbols (/../).
+
+:additional          : <p>To eliminate this vulnerability, the data received from the parameter should be filtered '<%= self.parameter %>' after their substitution in the file name variable.</p><p>The file name should be given its canonical form (without relative paths).</p><p>Also, the elimination of the vulnerability may be accomplished by filtering the special pathname characters (/ \\ ..) in the parameter '<%= self.parameter %>.'</p>
+
+:exploit_example     : <%= self.exploit_example %>

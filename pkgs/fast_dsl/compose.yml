@@ -1,0 +1,4 @@
+---
+
+builder:
+  image: wallarm-dkr.jfrog.io/builder:gem

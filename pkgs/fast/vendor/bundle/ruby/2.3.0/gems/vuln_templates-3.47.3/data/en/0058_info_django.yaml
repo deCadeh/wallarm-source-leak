@@ -1,0 +1,24 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '20'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Django URLs disclosure at '<%= self.path %>' on host '<%= self.ip %>:<%= self.port %>'
+
+:description         : Lack of authentication allows the attacker to retrieve technical data. Deny
+  anonymous access to '<%= self.path %>' to fix this issue.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

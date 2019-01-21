@@ -1,0 +1,20 @@
+---
+
+scanner-extensions:
+    image: scanner-extensions
+    links:
+        - scanner-test-app
+        - oob-dns
+
+scanner-test-app:
+    image: dockreg.onsec.ru/wallarm-scanner-testapp:latest
+    ports:
+        - "80:80"
+
+oob-dns:
+    image: dockreg.onsec.ru/wallarm-oobdns
+    ports:
+        - "8080:8080"
+        - "5053:5053"
+        - "5053:5053/udp"
+

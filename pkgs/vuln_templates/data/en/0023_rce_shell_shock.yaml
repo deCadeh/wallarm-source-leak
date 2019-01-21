@@ -1,0 +1,27 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '80'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : The &apos;ShellShock&apos; vulnerability of the Bash code execution at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : The vulnerability is due to the use of an outdated version of the Bash command interpreter.
+  The malicious user could execute an arbitrary interpreter code from the variables indication field.
+  Bash variables can be set in various ways, therefore the vulnerability is reflected in many network services,
+  including HTTP, DNS, DHCP and others.
+
+:additional          : To eliminate this vulnerability, the Bash software should be updated to the latest version.
+  This vulnerability has been fixed in version 4.3.<p/> The vulnerability has numbers <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271">CVE-2014-6271</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6277">CVE-2014-6277</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6278">CVE-2014-6278</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7169">CVE-2014-7169</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7186">CVE-2014-7186</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7187">CVE-2014-7187</a> in NIST catalog.</a><p/>To reduce the risk, make sure the software is updated on a regular basis, at least for critical security updates.<p/>
+
+:exploit_example     : <%= self.exploit_example %>

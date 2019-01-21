@@ -1,0 +1,30 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '70'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : OpenSSL 'Heartbleed' vulnerability (CVE-2014-0160) at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : The vulnerability is due to the use of an outdated version of
+  the OpenSSL library. The malicious user could obtain up to 64KB of the web server's memory
+  as a response to a specially formed request. The data (user names, passwords, session IDs, etc.)
+  of the clients who are currenty connected to the server are in the web server memory. The attacker
+  could gain access to virtually the entire web server memory through a repeating memory read operation
+  for an extended time period.
+
+:additional          : <p>To fix the vulnerability, OpenSSL should be updated to the latest version.</p><p>This vulnerability has been fixed in version 1.0.1f.</p><p>To run an example of this exploit, you could use <a href='https://github.com/wallarm/heartbleed.py/blob/master/heartbleed.py'>this script</a>.</p>
+
+:exploit_example     : ! '$ ./heartbleed.py <%= self.ip %> -p <%= self.port %>
+
+  <%= self.exploit_example %>'

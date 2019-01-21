@@ -1,0 +1,38 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '80'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Уязвимость 'ShellShock' выполнения кода Bash на узле '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  Уязвимость существует из-за использования устаревшей версии интерпретатора
+  командной строки Bash. Злоумышленик может выполнить произвольный код
+  интерпретатора из области указания значений переменных.
+  Устанавливать переменные Bash можно различными способами, поэтому уязвимость
+  имеет свое отражение во многих сетевых сервисах, включая HTTP, DNS, DHCP и другие.
+
+:additional          : >
+  Для устранения уязвимости следует обновить программное обеспечение Bash до
+  актуальной версии. Данная уязвимость была устранена в версии 4.3.
+  <p>Уязвимость имеет номера <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271">
+  CVE-2014-6271</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6277">
+  CVE-2014-6277</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6278">
+  CVE-2014-6278</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7169">
+  CVE-2014-7169</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7186">
+  CVE-2014-7186</a>, <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7187">
+  CVE-2014-7187</a> в каталоге NIST.</a></p>
+  <p>Для уменьшения риска необходимо следить за своевременным обновлением ПО, по крайней мере за критическими обновлениями безопасности.</p>
+
+:exploit_example     : <%= self.exploit_example %>

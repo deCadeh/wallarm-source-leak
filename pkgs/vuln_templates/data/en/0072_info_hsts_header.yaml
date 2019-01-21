@@ -1,0 +1,37 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '20'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Missing "Strict-Transport-Security" header in server's response at '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  This vulnerability exists due to the absence of the "Strict-Transport-Security" header in the server's response.
+  The interaction mechanism between client and server via SSL does not use the protective HSTS profile
+  (HTTP Strict Transport Security) to transform all HTTP links to HTTPS links. The absence of this
+  header allows an attacker to redirect the victim from HTTPS to HTTP via a man-in-the-middle attack.
+  In this case, all the data from the client to server will be transferred without encryption and will be
+  available to the attacker (including the authorization via login/password and cookies, even with the
+  httpOnly flag). Using the "Strict-Transport-Security" header in the HTTP server response provides
+  activation of the HSTS profile in all modern browsers.
+
+:additional          : >
+  To fix the vulnerability, you should configure your web server to send the "Strict-Transport-Security" header in the response.
+  Here is an example of a correct HSTS header:
+
+  <code>Strict-Transport-Security: max-age=31536000; includeSubDomains</code>
+
+  <i>max-age</i> is a period of profile expiration (31536000 is one year). The <i>includeSubDomains</i> directive applies this profile to the subdomains.
+
+:exploit_example     : <%= self.exploit_example %>

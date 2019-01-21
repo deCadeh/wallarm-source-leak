@@ -1,0 +1,24 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '30'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Open access to Zend Framework configuration file at '<%= self.path %>' on node '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  The vulnerability exists because of open access to the Zend Framework configuration file. Hacker can get technical information about a target system and use the data for the future attacks.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

@@ -1,0 +1,32 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '90'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : HTTPOXY vulnerability (CVE-2016-5385 et al.) at host '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  Invalid CGI configuration allows the attacker to initiate outgoing requests from the vulnerable server to target hosts.
+
+:additional          : >
+  An attacker may be able to:
+  <li>Proxy the outgoing HTTP requests made by the web application</li>
+  <li>Direct the server to open outgoing connections to an address and port of their choosing</li>
+  <li>Tie up server resources by forcing the vulnerable software to use a malicious proxy</li>
+  Clear the "Proxy" request header for all HTTP requests coming from the internet before transferring them to CGI proccesses, i.e.:
+  <pre>
+  RequestHeader unset Proxy early
+  </pre>
+
+:exploit_example     : <%= self.exploit_example %>

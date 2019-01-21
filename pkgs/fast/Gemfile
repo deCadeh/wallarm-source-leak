@@ -1,0 +1,30 @@
+source 'https://rubygems.org'
+
+gem 'ruby-gumbo'
+gem 'therubyracer'
+gem 'liquid', '=3.0.6'
+gem 'hashie'
+gem 'digest-crc'
+gem 'net-http-rest_client'
+gem 'redis', '=3.3.3'
+gem 'qless', '=0.10.5'
+# fast-dsl gem requires dry-validation gem that requires dry-types gem that requires new ruby version
+# dry-types version is fixed to avoid ruby version conflict
+gem 'dry-types', '~>0.10.3'
+gem 'dogstatsd-ruby'
+gem 'fluentd'
+gem 'fluent-plugin-rewrite-tag-filter'
+gem 'mixlib-log', '=1.7.1'
+
+group :test, :development do
+  gem 'rspec'
+end
+
+source 'https://wallarm.jfrog.io/wallarm/api/gems/gems/' do
+  gem 'fast_dsl', '=0.4.2'
+  gem 'vuln_templates', '=3.47.3'
+  gem 'scanner_extensions', '=0.14.2'
+  gem 'log_streamer', '=0.2.0'
+  gem 'rps_limit', '=0.5.1'
+  gem 'wallarm_logger', '=1.1.1'
+end

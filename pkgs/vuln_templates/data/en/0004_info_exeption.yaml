@@ -1,0 +1,26 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '20'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Application error information display '<%= self.path %>' on the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : The vulnerability is due to an incorrect application server configuration. Application error messages
+  go to the HTTP user responses, where they can be accessed by the attacker. The attacker could use this information to study
+  the application technology stack and carry out further attacks. Error information often contains class names of the components
+  used, the full file paths, and in some cases the content of variables, including those concerning configuration.
+
+:additional          : To fix the vulnerability, disable web application error messages in the HTTP responses to users.
+
+:exploit_example     : <%= self.exploit_example %>

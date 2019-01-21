@@ -1,0 +1,26 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '90'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Открытый доступ к Bitrix Restore по адресу '<%= self.path %>' на узле '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  Уязвимость существует из-за открытого доступа к инструменту восстановления данных веб-приложения. Данный сценарий позволяет злоумышленнику загрузить исполнимые файлы, тем самым - скомпрометировать веб-сервер.
+
+
+:additional          : >
+  Для устранения уязвимости необходимо ограничить доступ или удалить данный файл.
+
+:exploit_example     : <%= self.exploit_example %>

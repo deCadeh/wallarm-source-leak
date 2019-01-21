@@ -1,0 +1,26 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '100'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Execution of arbitrary OS commands due to incorrect filtering of data in the parameter '<%= self.parameter %>'
+  of the script '<%= self.path %>'
+
+:description         : This vulnerability is due to the absence of special character command line interpreter
+  filtering when the user data goes from parameter '<%= self.parameter %>' of the HTTP request to the command-line argument.
+  The malicious user could execute OS arbitrary commands with the rights of the web application server user.
+
+:additional          : To eliminate this vulnerability, user data should be filtered in the parameter '<%= self.parameter %>' with the function <a href="http://php.net/manual/en/function.escapeshellarg.php">escapeshellarg()</a> or the like.
+
+:exploit_example     : <%= self.exploit_example %>

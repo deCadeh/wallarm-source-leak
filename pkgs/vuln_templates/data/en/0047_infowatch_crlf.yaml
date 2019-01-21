@@ -1,0 +1,23 @@
+---
+
+:type                : crlf
+
+:target              : client
+
+:threat              : '30'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Possibly CRLF vulnerability at '<%= self.path %>'
+
+:description         : Improper input validation allows the attacker to perform CRLF attacks.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

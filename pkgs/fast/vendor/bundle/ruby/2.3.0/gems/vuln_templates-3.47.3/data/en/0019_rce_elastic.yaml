@@ -1,0 +1,24 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Arbitrary Elasticsearch code execution at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the use of an outdated version of the Elasticsearch product.
+  The malicious user could execute an arbitrary Java shell code by sending a special HTTP request.
+
+:additional          : <p>To eliminate this vulnerability, the Elasticsearch software should be updated to the latest version. This vulnerability has been fixed in version 1.4.3.</p><p>This vulnerability has a number <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=2015-1427">CVE-2015-1427 in the NIST catalog.</a></p><p>To reduce the risk, make sure the software is updated on a regular basis, at least for critical security updates.</p>
+
+:exploit_example     : <%= self.exploit_example %>

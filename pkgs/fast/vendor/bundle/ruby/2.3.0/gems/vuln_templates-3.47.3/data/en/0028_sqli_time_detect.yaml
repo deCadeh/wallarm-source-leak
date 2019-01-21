@@ -1,0 +1,39 @@
+---
+
+:type                : sqli
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : SQL injection by improper input validation for '<%= self.parameter %>' parameter
+  at '<%= self.path %>'
+
+:description         : This vulnerability is due to the absence of SQL syntax special characters filtering
+  when the user data goes from the parameter '<%= self.parameter %>' to the DBMS request. The malicious user can
+  change the request structure and introduce operators, thus giving the request certain logic to bypass
+  the web application's functionality. As a result, the attacker can gain access to the database
+  content and disrupt the performance of the web application.
+
+:additional          : To fix the vulnerability, template queries (prepared statements) should be used when accessing the DBMS.<p/> In some cases, it is allowed to use special functions to filter data, such as <a href="http://php.net/manual/en/function.mysql-real-escape-string.php">mysql_real_escape_string()</a><p/>
+
+:exploit_example     : ! 'The vulnerability was found through the pattern matching of the web server response time and the value of the argument in the time delay function of the vectors attacks requests.
+  below:
+
+
+  1. The server response to the first request was received within <%= self.time1 %> seconds:
+
+  <%= self.curl1 %>
+
+
+  2. The server response to the second request was received within <%= self.time2 %> seconds:
+
+  <%= self.curl2 %>'

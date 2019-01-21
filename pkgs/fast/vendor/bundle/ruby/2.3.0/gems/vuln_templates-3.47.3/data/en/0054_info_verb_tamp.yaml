@@ -1,0 +1,34 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '90'
+
+:method              : POST
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Auth bypass through verb tampering vulnerability at host '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  By manipulating the HTTP methods, it was possible to bypass the authorization on directory '<%= self.path %>.'
+  The attacker can use unpredicted HTTP verbs such as POST, TRACE, TRACK, PUT, DELETE, and many more.
+
+:additional          : >
+  You should change config to protect all HTTP methods to fix this vulnerability.
+
+  A vulnerable config may look like:
+    <pre>
+    &lt;Limit GET&gt;
+      require valid-user
+    &lt;/Limit&gt;
+    </pre>
+    More information available at: <a href="https://www.owasp.org/index.php/Testing_for_HTTP_Verb_Tampering_(OTG-INPVAL-003)">https://www.owasp.org/index.php/Testing_for_HTTP_Verb_Tampering_(OTG-INPVAL-003)</a>
+
+:exploit_example     : <%= self.exploit_example %>

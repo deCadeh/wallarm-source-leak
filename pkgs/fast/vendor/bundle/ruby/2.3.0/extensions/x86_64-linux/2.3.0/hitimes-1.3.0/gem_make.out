@@ -1,0 +1,25 @@
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/hitimes-1.3.0/ext/hitimes/c
+/usr/bin/ruby2.3 -r ./siteconf20190115-63-1b60p2w.rb extconf.rb
+checking for clock_gettime() in -lrt... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /opt/wallarm/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/hitimes-1.3.0/mkmf.log
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/hitimes-1.3.0/ext/hitimes/c
+make "DESTDIR=" clean
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/hitimes-1.3.0/ext/hitimes/c
+make "DESTDIR="
+compiling hitimes.c
+compiling hitimes_instant_clock_gettime.c
+compiling hitimes_instant_osx.c
+compiling hitimes_instant_windows.c
+compiling hitimes_interval.c
+compiling hitimes_stats.c
+linking shared-object hitimes/2.3/hitimes.so
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/hitimes-1.3.0/ext/hitimes/c
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 hitimes.so ./.gem.20190115-63-1junft0/hitimes/2.3

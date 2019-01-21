@@ -1,0 +1,5 @@
+---
+"
+More information available at: <a href='<%= self.link %>' target='new'><%= self.link %></a>
+"
+...

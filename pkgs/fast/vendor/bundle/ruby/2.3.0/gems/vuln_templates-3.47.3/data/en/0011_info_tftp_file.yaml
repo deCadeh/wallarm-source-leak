@@ -1,0 +1,28 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '50'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Access to the file '<%= self.file_name %>' of hardware settings via TFTP at the node '<%= self.ip %>:<%=
+  port %>'
+
+:description         : <p>The vulnerability is due to the lack of network limitations while accessing the TFTP
+  service from the internet.</p><p>TFTP protocol is typically used to read and write the settings of various equipment,
+  such as network devices or network server load.</p><p>The protocol does not provide client authentication, so the
+  service must be available only on the company's internal network.</p><p>In this case, the file sharing server is
+  accessible from the internet, and the attacker can gain access to the configuration file "<%= self.file_name%>."</p>
+
+:additional          : To resolve this vulnerability, access from the internet should be denied to port "<%= self.port %>" of the node "<%= self.ip %>."
+
+:exploit_example     : <%= self.exploit_example %>

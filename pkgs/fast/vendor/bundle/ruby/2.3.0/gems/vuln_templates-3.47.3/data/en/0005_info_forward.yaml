@@ -1,0 +1,27 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '70'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Authentication bypass via a fake X-Forwarded-For header at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : The vulnerability is due to a Web server configuration error. The attacker could falsify
+  the sender's address by sending an HTTP header X-Forwarded-For, or a similar one, and, as a consequence, bypass
+  the authentication system. The Web server checks the username and password only if the user address does not
+  matchthe local server address. The attacker can specify the local address in the header and bypass the username
+  and password verification.
+
+:additional          : <p>To resolve this vulnerability, the client&apos;s address receipt from HTTP request headers should be forbidden.</p><p>The client&apos;s address must be obtained from the network connection.</p>
+
+:exploit_example     : <%= self.exploit_example %>

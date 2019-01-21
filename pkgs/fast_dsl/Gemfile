@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+source 'https://wallarm.jfrog.io/wallarm/api/gems/gems'
+source 'https://wallarm.jfrog.io/wallarm/api/gems/gems-dev'
+
+gemspec

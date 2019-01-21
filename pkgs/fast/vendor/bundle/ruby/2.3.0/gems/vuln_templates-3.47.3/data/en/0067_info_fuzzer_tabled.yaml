@@ -1,0 +1,65 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '10'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Possible vulnerability at '<%= self.parameter %>' on '<%= self.path %>'
+
+:description         : Vulnerability scanner using fuzzer found the anomalies listed below.
+
+:additional          : "
+<style>
+  .vuln-fuzzer {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 800px;
+  }
+  .vuln-fuzzer td, .vuln-fuzzer th{
+    border:  1px solid;
+    padding: 8px;
+    vertical-align: top;
+  }
+</style>
+The baseline vector has the following metrics:
+<p></p>
+<table class='vuln-fuzzer'>
+<tr>
+  <th>Bytes</th>
+  <th>Status</th>
+  <th>Size</th>
+  <th>Time</th>
+  <th>Error</th>
+  <th>DOM diff</th>
+</tr>
+  <%= self.html_baseline %>
+</table>
+<p></p>
+Found the following anomalies:
+<p></p>
+<table class='vuln-fuzzer'>
+<tr>
+  <th>Bytes</th>
+  <th>Status</th>
+  <th>Size</th>
+  <th>Time</th>
+  <th>Error</th>
+  <th>DOM diff</th>
+</tr>
+<% self.html_rows.each do |row|%>
+  <%= row %>
+<% end %>
+</table>
+"
+
+:exploit_example     : <%= self.exploit_example %>

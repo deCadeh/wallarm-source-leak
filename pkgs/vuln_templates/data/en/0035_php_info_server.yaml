@@ -1,0 +1,27 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '30'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Display of technical information of the phpinfo() function at '<%= self.path %>' node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to open access to the output of the phpinfo() function from the internet. The malicious
+  user could use the sensitive technical information therein to gather data about the target system and to carry out further attacks.
+
+:additional          : >
+  <p>To fix the vulnerability, deny public access to '<%= self.path %>.'
+  </p><p>The following is part of the technical details of the function displayed:</p>
+  <pre><%= self.php_info_data %></pre>
+
+:exploit_example     : <%= self.exploit_example %>

@@ -1,0 +1,26 @@
+---
+
+:type                : xss
+
+:target              : client
+
+:threat              : '40'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : /crossdomain.xml
+
+:title               : The absence of restrictions to information at the cross-domain access on the site through the Adobe Flash components
+
+:description         : This vulnerability is due to incorrect settings in the cross-domain interactions
+  configuration file for the Adobe Flash components. The current configuration in the crossdomain.xml
+  file allows any third-party resources to obtain information from the vulnerable site without any restrictions.
+  The attacker could exploit this error to obtain personal information from the vulnerable site.
+
+:additional          : To eliminate the vulnerability, edit the crossdomain.xml file so that the "domain" section contains a list of allowed sites.<p/> Currently, the section contains the "*" symbol, which allows reading confidential information from any websites.<p/>
+
+:exploit_example     : <%= self.exploit_example %>

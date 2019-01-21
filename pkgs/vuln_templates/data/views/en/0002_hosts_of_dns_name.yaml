@@ -1,0 +1,10 @@
+---
+"
+Domain <%= self.name %> is hosted at:
+<ul>
+<% self.hosts.each do |host|%>
+<li><%= host %></li>
+<% end %>
+</ul>
+"
+...

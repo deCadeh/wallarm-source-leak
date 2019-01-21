@@ -1,0 +1,23 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '100'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Java Debug Wire Protocol enabled at '<%= self.ip %>:<%= self.port %>'
+
+:description         : Java Debug Wire Protocol is enabled on the server, which allows remote arbitrary code execution. Authentication isn't required to exploit this vulnerability.
+
+:additional          : To eliminate this vulnerability, the Java Debug Wire Protocol should be disabled on the server.
+
+:exploit_example     : <%= self.exploit_example %>

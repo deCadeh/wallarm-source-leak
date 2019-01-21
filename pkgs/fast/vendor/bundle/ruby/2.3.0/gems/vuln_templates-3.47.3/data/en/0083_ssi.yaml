@@ -1,0 +1,23 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Server-side template injection by an improper input validation at '<%= self.parameter %>' parameter at '<%= self.path %>' action
+
+:description         : Server-side template injection occurs when user input is unsafely embedded into a server-side template, allowing users to inject template directives. With malicious template directives, an attacker may be able to execute arbitrary code and take full control over the web server.
+
+:additional          : To eliminate this vulnerability, the data received from the parameter should be filtered.
+
+:exploit_example     : <%= self.exploit_example %>

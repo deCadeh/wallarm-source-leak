@@ -1,0 +1,30 @@
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec)
+
+task default: 'test:all'
+
+task test: 'test:all'
+
+namespace :test do
+  desc 'Run tests for local lib'
+  task :local do
+    exec 'LOCAL=true rspec'
+  end
+
+  desc 'Run tests for installed gem'
+  task :gem do
+    Rake::Task['spec'].invoke
+  end
+
+  desc 'Run compose tests'
+  task :compose do
+    exec 'docker/launch_compose_tests.sh'
+  end
+
+  desc 'Run tests for installed gem & compose tests'
+  task :all do
+    exec 'bundle exec rspec && docker/launch_compose_tests.sh'
+  end
+end

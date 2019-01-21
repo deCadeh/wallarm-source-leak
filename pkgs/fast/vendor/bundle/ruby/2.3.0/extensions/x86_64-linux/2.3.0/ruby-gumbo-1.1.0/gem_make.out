@@ -1,0 +1,31 @@
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/ruby-gumbo-1.1.0/ext
+/usr/bin/ruby2.3 -r ./siteconf20190115-63-10k0mem.rb extconf.rb
+checking for gumbo_parse() in -lgumbo... no
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /opt/wallarm/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/ruby-gumbo-1.1.0/mkmf.log
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/ruby-gumbo-1.1.0/ext
+make "DESTDIR=" clean
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/ruby-gumbo-1.1.0/ext
+make "DESTDIR="
+compiling attribute.c
+compiling char_ref.c
+compiling error.c
+compiling parser.c
+compiling ruby_gumbo_ext.c
+compiling string_buffer.c
+compiling string_piece.c
+compiling tag.c
+compiling tokenizer.c
+compiling utf8.c
+compiling util.c
+compiling vector.c
+linking shared-object gumbo_ext.so
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/ruby-gumbo-1.1.0/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gumbo_ext.so ./.gem.20190115-63-cqh9vm

@@ -1,0 +1,25 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '70'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Open access from the Internet to the <%= self.protocol %> service at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the absence of authentication when accessing the node
+  <%= self.protocol %> service '<%= self.ip %>' from the internet. The malicious user can gain access to the network
+  service and operate its functionality as they see fit.
+
+:additional          : To fix the vulnerability, network access from the internet should be restricted at port '<%= self.port %>' of the node '<%= self.ip %>,' or authorization should be used.
+
+:exploit_example     : <%= self.exploit_example %>

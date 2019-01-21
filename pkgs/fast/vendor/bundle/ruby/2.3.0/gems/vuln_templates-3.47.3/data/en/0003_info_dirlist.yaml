@@ -1,0 +1,26 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '30'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Open access to the web directory content '<%= self.path %>' at the node '<%= self.ip %>'
+
+:description         : The vulnerability is due to the absence of authentification when accessing the directory content.
+  '<%= self.path %>'. As a result, the malicious user can get the list of files located in the directory and their content.
+  Information in the web directory files is particularly sensitive in the case of event log files and configuration
+  settings (configuration files), as well as in temporary files and files with caching results.
+
+:additional          : To eliminate the vulnerability, it is necessary to prevent unauthenticated access from viewing the contents of a directory.
+
+:exploit_example     : <%= self.exploit_example %>

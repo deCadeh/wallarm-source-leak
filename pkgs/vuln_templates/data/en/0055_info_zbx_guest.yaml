@@ -1,0 +1,30 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '60'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Zabbix monitoring panel guest access at host '<%= self.ip %>:<%= self.port %>'
+
+:description         : >
+  Lack of authentication allows the attacker to operate with the Zabbix monitoring web interface.
+
+:additional          : >
+  Deny anonymous (guest) access to the Zabbix web interface to fix this issue.
+
+  Installed Zabbix version is:
+    <pre>
+      <%= self.zbx_version %>
+    </pre>
+
+:exploit_example     : <%= self.exploit_example %>

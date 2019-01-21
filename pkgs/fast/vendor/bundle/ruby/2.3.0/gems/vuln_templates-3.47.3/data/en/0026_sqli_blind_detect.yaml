@@ -1,0 +1,38 @@
+---
+
+:type                : sqli
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : The implementation of the SQL statements in the parameter '<%= self.parameter %>' of the script '<%= self.path %>'
+
+:description         : Improper input validation for the '<%= self.parameter %>' parameter allows attackers
+  to execute arbitrary SQL commands. A successful exploitation of SQLi could result
+  in reading sensitive data from the database, modifying this data, and in some cases
+  even execution of arbitrary commands in the OS.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : ! 'Blind sql injection by difference between responses followed
+  below:
+
+
+  1. Response for first request probe have <%= self.size1 %> byte:
+
+  <%= self.curl1 %>
+
+
+  2. Response for second request probe have <%= self.size2 %> bytes and extra <%= self.metric
+  %> DOM elements:
+
+  <%= self.curl2 %>'

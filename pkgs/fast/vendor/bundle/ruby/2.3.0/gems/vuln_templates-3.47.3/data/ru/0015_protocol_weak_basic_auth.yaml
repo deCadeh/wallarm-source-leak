@@ -1,0 +1,23 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '70'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Слабая пара логин:пароль при HTTP авторизации на узле '<%= self.ip %>:<%= self.port %>'
+
+:description         : Уязвимость существует из-за использования предсказуемой пары логин/пароль при HTTP авторизации на узле '<%= self.ip %>:<%= self.port %>'
+
+:additional          : Для исправление уязвимости следует использовать пароль длиннее 12 символов, состоящий из спец. символов и символов разного регистра
+
+:exploit_example     : <%= self.exploit_example %>

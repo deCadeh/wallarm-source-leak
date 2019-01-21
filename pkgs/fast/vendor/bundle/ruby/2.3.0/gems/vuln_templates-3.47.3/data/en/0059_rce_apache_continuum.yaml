@@ -1,0 +1,24 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '90'
+
+:method              : POST
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : /continuum/saveInstallation.action
+
+:title               : Apache Continuum Arbitrary Command Execution at '<%= self.path %>' on host '<%= self.ip %>:<%= self.port %>'
+
+:description         : By injecting a command into the installation.varValue POST parameter to
+                       /continuum/saveInstallation.action, a shell can be spawned.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

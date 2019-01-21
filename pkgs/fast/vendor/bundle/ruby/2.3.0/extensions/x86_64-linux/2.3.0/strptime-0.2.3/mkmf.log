@@ -1,0 +1,104 @@
+have_func: checking for rb_timespec_now()... -------------------- yes
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.3.0 -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.3-TqM27i/ruby2.3-2.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.3  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.3.0 -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.3-TqM27i/ruby2.3-2.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.3  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_timespec_now; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_time_timespec_new()... -------------------- yes
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.3.0 -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.3-TqM27i/ruby2.3-2.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.3  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_time_timespec_new; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_time_utc_offset()... -------------------- no
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.3.0 -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.3-TqM27i/ruby2.3-2.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.3  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function 't':
+conftest.c:13:57: error: 'rb_time_utc_offset' undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_time_utc_offset; return !p; }
+                                                         ^~~~~~~~~~~~~~~~~~
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_time_utc_offset; return !p; }
+/* end */
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.3.0 -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.3-TqM27i/ruby2.3-2.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.3  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+/tmp/ccyZ3DJa.o: In function `t':
+/opt/wallarm/vendor/bundle/ruby/2.3.0/gems/strptime-0.2.3/ext/strptime/conftest.c:14: undefined reference to `rb_time_utc_offset'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_time_utc_offset();
+14: int t(void) { rb_time_utc_offset(); return 0; }
+/* end */
+
+--------------------
+

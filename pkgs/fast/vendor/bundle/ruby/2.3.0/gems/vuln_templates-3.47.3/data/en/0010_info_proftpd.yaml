@@ -1,0 +1,29 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '70'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : The CVE-2015-3306 vulnerability of the ProFTPD file server at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the use of an outdated version of the ProFTPD file server.
+  The attacker can copy arbitrary files on the server to arbitrary directories even without authorization.
+  This vulnerability is of particular danger when the file server is running at the same node as a web server.
+  In this case, the attacker can copy the log file to any available directory of the web server under a different
+  name with an extension of an executable file (for instance, .php). The event log file will contain information
+  from the attacker&apos;s previous queries, which can be used as an executable shell language script (e.g., PHP).
+  As a result, the attacker may be able to execute an arbitrary interpreter code through the web server.
+
+:additional          : To fix the vulnerability, the file server needs to be updated to the latest version. This vulnerability has been fixed in version 1.3.6.
+
+:exploit_example     : <%= self.exploit_example %>

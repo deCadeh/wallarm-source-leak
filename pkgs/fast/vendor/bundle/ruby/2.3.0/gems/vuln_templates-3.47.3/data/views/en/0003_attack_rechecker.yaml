@@ -1,0 +1,5 @@
+---
+"
+<font color='red'>Attention! <a href='<%= self.link %>' target='new'>Found by incidents</a></font>
+"
+...

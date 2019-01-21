@@ -1,0 +1,26 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '70'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Windows kernel memory corruption at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the use of an outdated version of the MS Windows product.
+  The malicious user can corrupt the memory of the operating system kernel. This can lead to critical
+  consequences, from reading arbitrary memory locations with data from other users to an arbitrary code execution.
+  This vulnerability is exploited by sending HTTP requests with an invalid Range header value.
+
+:additional          : <p>To resolve this vulnerability, the software should be updated to the current version.</p><p>The vulnerability has a number <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=2015-1635">CVE-2015-1635 in the NIST catalog</a>, as well as <a href="http://technet.microsoft.com/security/bulletin/MS15-034" target="new">MS15-034 in the manufacturer's catalog</a>.</p><p>To reduce the risk, it is necessary to make sure the software is updated on a regular basis, at least for critical security updates.</p>
+
+:exploit_example     : <%= self.exploit_example %>

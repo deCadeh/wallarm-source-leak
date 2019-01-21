@@ -1,0 +1,23 @@
+---
+
+:type                : xss
+
+:target              : client
+
+:threat              : '50'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : <%= self.title %>
+
+:description         : <%= self.description %>
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

@@ -1,0 +1,34 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '10'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Possible vulnerability at '<%= self.parameter %>' on '<%= self.path %>'
+
+:description         : Vulnerability scanner using fuzzer found the anomalies listed below.
+
+:additional          : "
+The reference vector has the following metrics:
+<ul>
+<li><%= self.ethalon  %></li>
+</ul>
+Found the following anomalies:
+<ul>
+<% self.anomalies.each do |a|%>
+<li><%= a %></li>
+<% end %>
+</ul>
+"
+
+:exploit_example     : <%= self.exploit_example %>

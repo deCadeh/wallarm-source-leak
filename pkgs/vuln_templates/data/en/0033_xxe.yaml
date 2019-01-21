@@ -1,0 +1,32 @@
+---
+
+:type                : xxe
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : XML document external entity introduction at '<%= self.parameter %>' parameter at '<%= self.path %>' action
+
+:description         : >
+  This vulnerability is due to incorrect settings in the XML documents parsing library.
+  The DTD section of the XML documents allows the use of external entities. External entities can refer
+  to local files or network resources whose content will be implemented in an XML document. As a result,
+  a malicious user is able to read local files as well as data on the network services within the network.
+  Furthermore, the path to an XML document of the external entity resource may contain a URI scheme that will be
+  processed by a third-party library, which can lead to a variety of consequences. For example, in the case
+  of PHP with PECL extension, connection of an entity at URI 'expect://ls' will execute the 'ls' command of the command line.
+
+:additional          : >
+  <p>To eliminate the vulnerability, disable the function to load external entities during XML library initialization.
+  </p><p>It should be noted that malicious users will often use this vulnerability to provoke a denial of service through reading large files such as '/dev/urandom' or similar ones.<p>
+
+:exploit_example     : <%= self.exploit_example %>

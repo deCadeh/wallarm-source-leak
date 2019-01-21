@@ -1,0 +1,10 @@
+---
+"
+Available data sources listed below:
+<ul>
+<% self.datasources.each do |source|%>
+<li><%= source %></li>
+<% end %>
+</ul>
+"
+...

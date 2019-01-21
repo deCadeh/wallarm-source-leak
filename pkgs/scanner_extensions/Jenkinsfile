@@ -1,0 +1,4 @@
+#!groovy
+
+BuildAndPublishGem(
+    compose: 'docker/docker-compose-jenkins.yml')

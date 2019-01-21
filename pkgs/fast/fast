@@ -1,0 +1,36 @@
+#!/usr/bin/ruby
+# -*- encoding: utf-8 -*-
+
+$: << File.expand_path( '../lib', __FILE__)
+Dir.chdir(File.dirname(__FILE__))
+
+require 'yaml'
+require 'app'
+
+# overrides ScannerExtensions::Helpers::OobDnsClient required from 'scanner_extensions'
+require 'oob_dns_client'
+
+FastDsl.oob_dns = OobDnsStub.new
+
+require 'fast/fast'
+
+App.watch_node_yaml
+App.init
+App.switch_to_http_logger
+App.config.private_scan = true
+
+STDOUT.sync = true
+STDERR.sync = true
+
+if ENV['GIT_EXTENSIONS']
+  if system("git clone #{ENV['GIT_EXTENSIONS']} /opt/custom_extensions")
+    App.logger.info('Custom git extenstions cloned')
+  else
+    App.logger.error('Error cloning custom git extenstions')
+  end
+end
+
+CustomExtensions.load('/opt/custom_extensions')
+
+App.logger.info('Waiting for TestRun...')
+Fast.new(workers: ENV.fetch('WORKERS', 10).to_i).run

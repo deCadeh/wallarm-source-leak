@@ -1,0 +1,37 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '30'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Inconsistent network restrictions configuration for IPv4 and IPv6 node address '<%= self.domain %>'
+
+:description         : This vulnerability is due to different network restriction settings for one node on both IPv4 and IPv6 addresses.
+  As a result, some services that are closed from external access on an IPv4 address may be available on IPv6 and vice versa.
+  Thus, the malicious user can bypass the restrictions and obtain network access to the services.
+
+:additional          : "
+                       The network resource located at '<%= self.domain %>' has the following A (IPv4) and AAAA (IPv6) DNS records:
+                       <ul>
+                         <li><%= self.ipv4 %></li>
+                         <li><%= self.ipv6 %></li>
+                       </ul>
+                       There are more network services available on the internet at the '<%= self.ipv6 %>' address than at IPv4:
+                       <ul>
+                       <% self.ports.each do |prt|%>
+                       <li><%= prt %></li>
+                       <% end %>
+                       </ul>
+                       "
+
+:exploit_example     : <%= self.exploit_example %>

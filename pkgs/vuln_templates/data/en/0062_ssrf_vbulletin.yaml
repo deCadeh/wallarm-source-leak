@@ -1,0 +1,27 @@
+---
+
+:type                : csrf
+
+:target              : server
+
+:threat              : '50'
+
+:method              : POST
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : vBulletin SSRF at '<%= self.path %>' on host '<%= self.ip %>:<%= self.port %>'
+
+:description         : An unauthenticated attacker could perform a port scan of the
+                       internal services and could execute arbitrary system
+                       commands on a target vBulletin host with a locally
+                       installed Zabbix Agent monitoring service.
+                       For more details, see CVE-2016-6483.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

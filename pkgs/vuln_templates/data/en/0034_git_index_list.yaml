@@ -1,0 +1,39 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : /.git/index
+
+:title               : Access to the source code through the GIT repository
+
+:description         : >
+  This vulnerability is due to open access to the GIT version control system directory files.
+  The malicious user can gain access to the list of files, as well as to the content of some of them.
+
+:additional          : "
+                       List of files:
+                       <ul>
+                         <% self.files.each do |file|%>
+                           <li><%= file %></li>
+                         <% end %>
+                       </ul>
+                       List of root folders and files:
+                       <ul>
+                         <% self.root_folders.each do |file|%>
+                           <li><%= file %></li>
+                         <% end %>
+                       </ul>
+                       "
+
+:exploit_example     : <%= self.exploit_example %>
+

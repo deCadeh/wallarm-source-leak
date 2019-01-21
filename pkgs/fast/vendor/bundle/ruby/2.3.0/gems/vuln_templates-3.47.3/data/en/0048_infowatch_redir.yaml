@@ -1,0 +1,23 @@
+---
+
+:type                : redir
+
+:target              : client
+
+:threat              : '20'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Possibly Open Redirect vulnerability at '<%= self.path %>'
+
+:description         : Misconfiguration issues allow the attacker to redirect a client to another domain.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

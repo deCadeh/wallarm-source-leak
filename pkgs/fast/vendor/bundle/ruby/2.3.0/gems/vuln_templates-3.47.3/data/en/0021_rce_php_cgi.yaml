@@ -1,0 +1,27 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '80'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Arbitrary РНР code execution at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the use of an outdated version of
+  the PHP product. The malicious user could execute an arbitrary code by sending an
+  HTTP request with the -d argument in the URI parameter. The root of the error in
+  the CGI script call is due to the the arguments of the request parameters, which
+  become the arguments to start the interpreter.
+
+:additional          : <p>To resolve this vulnerability, the Elasticsearch software should be updated to the latest version.</p><p>This vulnerability has been fixed in version 5.3.12 and 5.4.2.</p><p>The vulnerability has number <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=2012-1823">CVE-2012-1823 in the NIST catalog.</a></p><p>To reduce the risk, make sure the software is updated on a regular basis, at least for critical security updates.</p>
+
+:exploit_example     : <%= self.exploit_example %>

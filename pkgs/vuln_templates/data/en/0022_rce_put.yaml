@@ -1,0 +1,25 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '50'
+
+:method              : PUT
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Loading arbitrary files via the PUT method at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to settings in the web server that allow
+  any internet user to upload arbitrary files. The attacker could exploit the vulnerability to download
+  executable interpreter files onto the web server, resulting in their ablity to execute arbitrary code.
+
+:additional          : To fix the vulnerability, the PUT method should be denied for HTTP requests by configuring the web server.<p/> In cases where this file load method is required, authorization should be used.<p/>
+
+:exploit_example     : <%= self.exploit_example %>

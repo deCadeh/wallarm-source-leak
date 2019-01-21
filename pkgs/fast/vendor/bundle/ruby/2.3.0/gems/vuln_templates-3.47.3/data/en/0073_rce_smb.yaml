@@ -1,0 +1,23 @@
+---
+
+:type                : rce
+
+:target              : server
+
+:threat              : '100'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Windows SMB Remote Code Execution Vulnerability (MS17-010) at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the use of an outdated version of the MS Windows product. This vulnerability could allow remote code execution if an attacker sends specially crafted messages to a Microsoft Server Message Block 1.0 (SMBv1) server.
+
+:additional          : To resolve this vulnerability, the software should be updated to the current version. For more details, see <a href='https://technet.microsoft.com/en-us/library/security/ms17-010.aspx'>MS17-010</a>.
+
+:exploit_example     : <%= self.exploit_example %>

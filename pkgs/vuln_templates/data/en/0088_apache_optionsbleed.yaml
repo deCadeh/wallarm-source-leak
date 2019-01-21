@@ -1,0 +1,23 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '50'
+
+:method              : <%= self.method %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:parameter           : <%= self.parameter %>
+
+:title               : Apache memory leak(Optionsbleed) at '<%= self.path %>' at the node '<%= self.ip %>:<%= self.port %>
+
+:description         : Apache server incorrectly resolves conflicts between .htaccess files located on different levels (for example, a specific directory and a global .htaccess file of the server). As a result, fragments of memory data show up in the response header ALLOW. That gives the potential intruder an opportunity to take advantage of collected technical data for further attacks.
+
+:additional          : To eliminate this vulnerability, update Apache to the latest version.
+
+:exploit_example     : <%= self.exploit_example %>

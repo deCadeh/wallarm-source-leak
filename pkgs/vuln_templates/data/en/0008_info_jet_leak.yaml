@@ -1,0 +1,27 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '60'
+
+:method              : POST
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : The CVE-2015-2080 vulnerability of the Jettyy application server at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : The vulnerability is due to the use of an outdated version of the
+  Jetty web application server. The malicious user could obtain up to 16B of the web server's
+  memory as a response to a specially formed request. The data (user names, passwords, session IDs, etc.)
+  of the clients who are currenty connected to the server are in the web server memory. The attacker could
+  gain access to virtually the entire web server memory through repeating memory read operations for an extended time period.
+
+:additional          : <p>To fix the vulnerability, the web application server should be updated to the latest version.</p><p>This vulnerability has been fixed in version 9.2.9.</p>
+
+:exploit_example     : <%= self.exploit_example %>

@@ -1,0 +1,23 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '50'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Apache memory leak (Optionsbleed) по адресу '<%= self.path %>' на узле '<%= self.ip %>:<%= self.port %>
+
+:description         : Apache сервер некорректно разрешает конфликты между файлами .htaccess, расположенных на разных уровнях при использовании в них параметра LIMIT. В результаты в заголовке ответа ALLOW появляются фрагменты памяти и это дает потенциальному злоумышленнику больше технических данных, которые он может далее использовать для развития атаки. Пример конфликта на разных уровнях — глобальный .htaccess самого сервера и конфигурационный файл для отдельной категории.
+
+:additional          : Чтобы устранить данную уязвимость - обновите версию Apache
+
+:exploit_example     : <%= self.exploit_example %>

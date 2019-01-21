@@ -1,0 +1,8 @@
+---
+"
+The stack trace is listed below:
+<pre>
+<%= self.stack_trace %>
+</pre>
+"
+...

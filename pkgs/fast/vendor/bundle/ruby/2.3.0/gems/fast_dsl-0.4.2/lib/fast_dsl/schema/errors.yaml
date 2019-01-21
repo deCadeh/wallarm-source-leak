@@ -1,0 +1,12 @@
+en:
+  errors:
+    hash?: 'must be a hash'
+    str_hash?: 'must be a hash of strings'
+    regexp_hash?: 'must be a hash with valid regexp keys and values'
+    regexp_or_array_of_regexp_hash?: 'must be a regexp or an array of hash with valid regexp keys and values'
+    regexp_or_array?: 'must be a regexp or a array'
+    regexp?: 'must be a valid regexp'
+    int_or_string?: 'must be a integer or a string'
+    detect_response_body: 'must be a regexp or an array'
+    detect_response: 'contains unsupported key value'
+    detect: 'contains unsupported key value'

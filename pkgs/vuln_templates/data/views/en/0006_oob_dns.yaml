@@ -1,0 +1,3 @@
+---
+"The vulnerability was discovered and confirmed based on the DNS request from the vulnerable server. The DNS request was received from the address(es) <%= self.hosts.join(', ') %>"
+...

@@ -1,0 +1,35 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : <%= self.threat %>
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : "A vulnerable application version detected: <%= self.software %> <%= self.version %>"
+
+:description         : >
+  We detected vulnerable software versions with the following vulns:
+
+:additional          : >
+  <% self.vulns.each do |vuln| %><pre>
+
+  <%= vuln[0] %>
+  <%= vuln[1] %>
+
+  Get additional info on <%= vuln[2] %>
+
+  </pre>
+
+
+  <% end %>
+
+:exploit_example     : <%= self.exploit_example %>

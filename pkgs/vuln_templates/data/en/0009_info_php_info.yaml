@@ -1,0 +1,25 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '30'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Display of technical information of the phpinfo() function at the address '<%= self.path %>' at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the open access to the output of the phpinfo() function
+  that contains sensitive technical information about the target system. The malicious user could use the data
+  to gather information about the target system's flaws and to carry out further attacks.
+
+:additional          : To eliminate this vulnerability, the file "<%= path %>" should be deleted from the web server directory.
+
+:exploit_example     : <%= self.exploit_example %>

@@ -1,0 +1,29 @@
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/atomic-1.1.101/ext
+/usr/bin/ruby2.3 -r ./siteconf20190115-63-sjnq39.rb extconf.rb
+checking for libkern/OSAtomic.h... no
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /opt/wallarm/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/atomic-1.1.101/mkmf.log
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/atomic-1.1.101/ext
+make "DESTDIR=" clean
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/atomic-1.1.101/ext
+make "DESTDIR="
+compiling atomic_reference.c
+atomic_reference.c: In function 'ir_alloc':
+atomic_reference.c:27:5: warning: 'rb_data_object_alloc' is deprecated: by rb_data_object_wrap [-Wdeprecated-declarations]
+     return rb_data_object_alloc(klass, (void *) Qnil, ir_mark, NULL);
+     ^~~~~~
+In file included from /usr/include/ruby-2.3.0/ruby.h:33:0,
+                 from atomic_reference.c:13:
+/usr/include/ruby-2.3.0/ruby/ruby.h:1428:1: note: declared here
+ rb_data_object_alloc(VALUE klass, void *data, RUBY_DATA_FUNC dmark, RUBY_DATA_FUNC dfree)
+ ^~~~~~~~~~~~~~~~~~~~
+linking shared-object atomic_reference.so
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/atomic-1.1.101/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 atomic_reference.so ./.gem.20190115-63-x827ps

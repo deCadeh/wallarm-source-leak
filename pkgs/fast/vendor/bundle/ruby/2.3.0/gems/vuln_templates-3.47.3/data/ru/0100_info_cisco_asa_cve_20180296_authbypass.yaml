@@ -1,0 +1,23 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Уязвимость CVE-2018-0296 в Cisco ASA Software на узле '<%= self.ip %>:<%= self.port %>'
+
+:description         : Уязвимость CVE-2018-0296 существует из-за использования устаревших продуктов Cisco ASA  и позволяет неавторизованному злоумышленнику просматривать конфиденциальную системную информацию на устройстве ASA с помощью выхода из директории (/../). Уязвимость усугубляется тем, что злоумышленник может вызвать отказ в обслуживании устройства (DoS).
+
+:additional          : Чтобы устранить уязвимость, обновите программное обеспечение Cisco Asa.
+
+:exploit_example     : <%= self.exploit_example %>

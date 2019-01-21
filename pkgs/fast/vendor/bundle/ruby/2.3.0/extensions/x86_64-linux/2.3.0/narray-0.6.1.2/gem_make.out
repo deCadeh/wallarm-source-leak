@@ -1,0 +1,38 @@
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/narray-0.6.1.2/src
+/usr/bin/ruby2.3 -r ./siteconf20190115-63-1785j9k.rb extconf.rb
+checking for stdint.h... yes
+checking for u_int8_t... yes
+checking for uint8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for u_int32_t... yes
+checking for uint32_t... yes
+creating narray_config.h
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /opt/wallarm/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/narray-0.6.1.2/mkmf.log
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/narray-0.6.1.2/src
+make "DESTDIR=" clean
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/narray-0.6.1.2/src
+make "DESTDIR="
+compiling na_array.c
+compiling na_func.c
+compiling na_index.c
+compiling na_linalg.c
+/usr/bin/ruby2.3 -I. ./mkmath.rb
+compiling na_math.c
+/usr/bin/ruby2.3 -I. ./mkop.rb
+compiling na_op.c
+compiling na_random.c
+compiling narray.c
+linking shared-object narray.so
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/narray-0.6.1.2/src
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 narray.so ./.gem.20190115-63-1opgbsl
+installing narray libraries
+installing default narray libraries

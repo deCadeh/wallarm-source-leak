@@ -1,0 +1,27 @@
+---
+
+:type                : xss
+
+:target              : client
+
+:threat              : '55'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : HTTP arbitrary response header implementation at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : The vulnerability is due to the absence of HTTP header special characters separator
+  the user data gets in the server response. The attacker can create an HTTP request that will add
+  a custom header to the HTTP server response. Sending such a request from the target user's browser
+  will lead to a cross-site scripting attack. As a result, the attacker can gain access to data or
+  perform actions on the compromised site on behalf of the user without his consent.
+
+:additional          : To eliminate this vulnerability, execute new line and carriage return filtering (0x0a, 0x0d) in the user data.<p/>
+
+:exploit_example     : <%= self.exploit_example %>

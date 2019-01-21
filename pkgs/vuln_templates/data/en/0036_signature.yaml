@@ -1,0 +1,28 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '20'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Display of technical information at '<%= self.path %>' at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to incorrect settings of the web application, through which sensitive
+  technical data can be accessed via the HTTP responses. The malicious user could use this sensitive technical information to gather
+  data about the target system and to carry out further attacks.
+
+:additional          : >
+  <p>To fix the vulnerability, ban the application errors from appearing at '<%= path %>.'
+  </p><p>The following is part of the technical details of the function displayed:</p>
+  <pre><%= self.signature %></pre>
+
+:exploit_example     : <%= self.exploit_example %>

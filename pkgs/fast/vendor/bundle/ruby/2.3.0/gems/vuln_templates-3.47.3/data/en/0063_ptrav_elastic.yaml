@@ -1,0 +1,26 @@
+---
+
+:type                : ptrav
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Elasticsearch PTRAV at '<%= self.ip %>:<%= self.port %>'
+
+:description         : Elasticsearch versions from 1.0.0 to 1.6.0 are vulnerable
+                       to a directory traversal attack. Users should upgrade to
+                       1.6.1 or later, or constrain snapshot API access
+                       to trusted sources. For more details, see CVE-2015-5531.
+
+:additional          : <%= self.additional %>
+
+:exploit_example     : <%= self.exploit_example %>

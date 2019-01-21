@@ -1,0 +1,31 @@
+---
+
+:type                : redir
+
+:target              : client
+
+:threat              : '20'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Unsafe client redirection at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the absence of address verification in the user redirection
+  functionality. The vulnerability could be exploited by the malicious user to send the victim to a malicious
+  resource under the guise of a trusted site. Open redirects are used for phishing attacks. It is assumed
+  that the victim opens a specially created link to a trusted resource. This link will contain a vector for
+  redirect exploitation, which actually is already a new link to a malicious resource, visually similar to
+  the original one. Thus, with the help of this vulnerability, the malicious user could elicit
+  some sensitive data from the user (such as user name and password or credit card details). Also, open redirects
+  are actively used in spam mailings to distribute malware. In this case, the antivirus software may mark the fragile
+  site as malicious, which will lower its ranking in search engines.
+
+:additional          : <p>To eliminate the vulnerability, check the address to which the redirect will be made as per the list of allowed sites.</p><p>If the node is not on the list, you should disable the automatic redirect, replacing it with, for example, a user alert of moving to a third-party resource.</p>
+
+:exploit_example     : <%= self.exploit_example %>

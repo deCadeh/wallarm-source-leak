@@ -1,0 +1,10 @@
+---
+"
+The web server with the vulnerability has the address <%= self.ip %> and the following DNS names:
+<ul>
+<% self.names.each do |name|%>
+<li><%= name %></li>
+<% end %>
+</ul>
+"
+...

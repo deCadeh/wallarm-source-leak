@@ -1,0 +1,23 @@
+Metrics/AbcSize:
+  Max: 100
+Metrics/CyclomaticComplexity:
+  Max: 15
+Metrics/MethodLength:
+  Max: 40
+Metrics/BlockLength:
+  Max: 40
+Metrics/PerceivedComplexity:
+  Max: 15
+Metrics/LineLength:
+  Max: 120
+Metrics/ModuleLength:
+  Max: 165
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/RescueStandardError:
+  Enabled: false
+Layout/AlignHash:
+  Enabled: false
+GlobalVars:
+  AllowedVariables:
+    - $terminate

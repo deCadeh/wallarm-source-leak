@@ -1,0 +1,28 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '80'
+
+:method              : <%= self.method %>
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : /.git/index
+
+:title               : Access to the source code through the GIT repository
+
+:description         : The vulnerability is due to the possibility of accessing the GIT source code
+  repository directory via the web. The malicious user can gain access to the source codes of
+  web applications and use this information for further attacks. Most often, web application
+  source codes are used by the attackers to gain access (keys, usernames, and passwords) to
+  the databases, as well as for research to detect other vulnerabilities.
+
+:additional          : To eliminate the vulnerability, access to the .git directory and to all of its subdirectories has to be closed by configuring the web server.
+
+:exploit_example     : <%= self.exploit_example %>
+

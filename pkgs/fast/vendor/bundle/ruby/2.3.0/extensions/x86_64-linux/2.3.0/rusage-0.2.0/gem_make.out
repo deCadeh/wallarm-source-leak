@@ -1,0 +1,15 @@
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/rusage-0.2.0/ext/rusage
+/usr/bin/ruby2.3 -r ./siteconf20190115-63-1xg7g1k.rb extconf.rb
+creating Makefile
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/rusage-0.2.0/ext/rusage
+make "DESTDIR=" clean
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/rusage-0.2.0/ext/rusage
+make "DESTDIR="
+compiling rusage.c
+linking shared-object rusage.so
+
+current directory: /opt/wallarm/vendor/bundle/ruby/2.3.0/gems/rusage-0.2.0/ext/rusage
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rusage.so ./.gem.20190115-63-j7zpnu

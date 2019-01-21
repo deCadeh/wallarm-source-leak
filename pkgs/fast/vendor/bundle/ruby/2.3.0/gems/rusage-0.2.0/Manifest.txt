@@ -1,0 +1,7 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+ext/rusage/extconf.rb
+ext/rusage/rusage.c

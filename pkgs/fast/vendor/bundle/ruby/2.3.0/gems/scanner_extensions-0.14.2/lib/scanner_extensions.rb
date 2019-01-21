@@ -1,0 +1,7 @@
+require 'scanner_extensions/helpers'
+require 'scanner_extensions/base_extension'
+require 'scanner_extensions/extensions'
+require 'scanner_extensions/loader'
+require 'scanner_extensions/wrappers'
+require 'scanner_extensions/fixtures'
+require 'scanner_extensions/test'

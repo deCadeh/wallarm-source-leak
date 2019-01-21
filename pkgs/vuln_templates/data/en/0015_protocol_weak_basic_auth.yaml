@@ -1,0 +1,23 @@
+---
+
+:type                : info
+
+:target              : server
+
+:threat              : '70'
+
+:method              : GET
+
+:parameter           : <%= self.parameter %>
+
+:domain              : <%= self.domain %>
+
+:path                : <%= self.path %>
+
+:title               : Weak combination login:password for HTTP authorization at the node '<%= self.ip %>:<%= self.port %>'
+
+:description         : This vulnerability is due to the use of predictably paired logins/passwords when accessing the service from the internet
+
+:additional          : Passwords should be longer than 12 characters and should contain special symbols.
+
+:exploit_example     : <%= self.exploit_example %>
